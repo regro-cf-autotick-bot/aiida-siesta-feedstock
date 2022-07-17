@@ -1,6 +1,6 @@
 {% set name = "aiida-siesta" %}
-{% set version = "1.3.0" %}
-{% set build = 1 %}
+{% set version = "1.4.0" %}
+{% set build = 0 %}
 {% set name_code = name + ".code" %}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiida-siesta-{{ version }}.tar.gz
-  sha256: e8e99a7f52e955b6b26bbccc02ee830da0ea7b76a586bd4062b0b40a1dc0ec88
+  sha256: bf6b4fb345d07f550baf7e31e125a99fd71c3f974cab1296790a31bd56e401d7
 
 build:
   number: {{ build }}
@@ -17,12 +17,12 @@ build:
 
 requirements:
   run:
-  - {{ pin_subpackage(name, exact=True) }}
-  - {{ pin_subpackage(name_code, exact=True) }}
+    - {{ pin_subpackage(name, exact=True) }}
+    - {{ pin_subpackage(name_code, exact=True) }}
 
 outputs:
 
-  - name:  {{ name }}
+  - name: {{ name }}
     build:
       noarch: python
       script: 'python -m pip install . --no-deps --ignore-installed -vvv '
