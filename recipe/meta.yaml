@@ -1,6 +1,6 @@
 {% set name = "aiida-siesta" %}
 {% set version = "2.0.0" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set name_code = name + ".code" %}
 
 package:
@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiida-siesta-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiida-siesta-{{ version }}.tar.gz
   sha256: 32c29ec0dcc1b9c685452470a5edfb2ca07b23390b47067f6429c154fbdef83f
 
 build:
@@ -30,13 +30,13 @@ outputs:
       host:
         - flit-core
         - pip
-        - python >=3.8
+        - python {{ python_min }}
       run:
         - aiida-core >=2.0.0,<3.0.0
         - aiida-pseudo >=0.7.0
         - aiida-optimize >=0.5.0
         - ase
-        - python >=3.8
+        - python >={{ python_min }}
         - seekpath >=1.9.3,<2
         - sisl
       run_constrained:
@@ -56,6 +56,8 @@ outputs:
       run:
         - siesta =4
     test:
+      requires:
+        - python {{ python_min }}
       commands:
         - which siesta
 
