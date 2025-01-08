@@ -1,11 +1,11 @@
-About aiida-siesta.meta
-=======================
+About aiida-siesta.meta-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiida-siesta-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/siesta-project/aiida_siesta_plugin
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiida-siesta-feedstock/blob/main/LICENSE.txt)
 
 Summary: A plugin for Siesta's basic functionality within the AiiDA framework.
 
@@ -97,7 +97,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -146,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@chrisjsewell](https://github.com/chrisjsewell/)
+* [@mbercx](https://github.com/mbercx/)
 
